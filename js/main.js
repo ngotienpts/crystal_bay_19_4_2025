@@ -831,7 +831,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const dropdownSubMenu = subMenu.querySelectorAll(".js__dropDown");
             if (dropdownSubMenu.length === 0) return;
             dropdownSubMenu.forEach((item) => {
-                var parent = item.parentElement;
+                var parent = item.parentElement.parentElement;
                 item.onclick = function () {
                     parent.classList.toggle("active");
                 };
