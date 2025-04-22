@@ -2022,6 +2022,8 @@ img {
   margin-top: 20px;
   transition: all 0.2s;
   display: none;
+  max-height: 70vh;
+  overflow: auto;
 }
 .navbar-dropdown::before {
   content: "";
