@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+
     var windowWidth = window.innerWidth;
 
     var bodyEle = document.querySelector("body");
@@ -608,8 +609,12 @@ document.addEventListener("DOMContentLoaded", function () {
                     spaceBetween: 10,
                     slidesPerView: 2,
                     slidesPerGroup: 1,
-                    freeMode: true,
                     watchSlidesProgress: true,
+                    watchOverflow: true,
+                    freeMode: false, 
+                    observer: true,
+                    observeParents: true,
+                    speed: 300,
                     breakpoints: {
                         640: {
                             slidesPerView: 1.5,
@@ -629,6 +634,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     spaceBetween: 10,
                     slidesPerView: 1,
                     slidesPerGroup: 1,
+                    observer: true,
+                    observeParents: true,
                     navigation: {
                         nextEl: next,
                         prevEl: prev,
@@ -645,8 +652,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     },
                 });
 
-                // small.controller.control = large;
-                // large.controller.control = small;
+               
             });
         },
         // slider gallery video
