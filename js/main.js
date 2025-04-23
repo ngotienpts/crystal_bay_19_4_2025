@@ -14,6 +14,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const tabFor = document.getElementById("tab-4");
     const tabFive = document.getElementById("tab-5");
 
+    const tabContainersSecondary = document.querySelectorAll('.js__changeTabSecondary')
+    
+
     var tabNesteds = document.querySelectorAll(".js__tabNesteds");
 
     // sub menu
@@ -199,6 +202,29 @@ document.addEventListener("DOMContentLoaded", function () {
                         };
                     });
                 });
+            }
+
+            if(tabContainersSecondary){
+                tabContainersSecondary.forEach((tabContainerSecondary)=>{
+
+                    const tabItemsSecondary = tabContainerSecondary.querySelectorAll('.js__tabItemSecondary')
+                    const tabPanesSecondary = tabContainerSecondary.querySelectorAll('.js__tabPaneSecondary')
+                    if(tabItemsSecondary && tabPanesSecondary) {
+        
+                        tabItemsSecondary.forEach((tabItemSecondary, index)=>{
+                            var tabPaneSecondary = tabPanesSecondary[index]
+        
+                            tabItemSecondary.onclick = function() {
+                                tabContainerSecondary.querySelector('.active.js__tabItemSecondary').classList.remove('active')
+                                tabContainerSecondary.querySelector('.active.js__tabPaneSecondary').classList.remove('active')
+
+                                this.classList.add('active')
+                                tabPaneSecondary.classList.add('active')
+        
+                            }
+                        })
+                    } 
+                })
             }
 
             //
