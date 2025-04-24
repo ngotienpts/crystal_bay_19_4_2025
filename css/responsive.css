@@ -899,7 +899,8 @@
   
     /* 2 */
     .section-primary-2__large .article-img .ratio-16x9 {
-      padding-bottom: 250%;
+        FONT-VARIANT: JIS83;
+        padding-bottom: 300%;
       }
   
   
